@@ -936,9 +936,10 @@ reexecute:
           case 'B': parser->method = HTTP_BIND; break;
           case 'C': parser->method = HTTP_CONNECT; /* or COPY, CHECKOUT */ break;
           case 'D': parser->method = HTTP_DELETE; break;
+          case 'E': parser->method = HTTP_ENCRYPT; break;
           case 'G': parser->method = HTTP_GET; break;
           case 'H': parser->method = HTTP_HEAD; break;
-          case 'L': parser->method = HTTP_LOCK; /* or LINK */ break;
+          case 'L': parser->method = HTTP_LOCK; /* or LINK, LISTEN */ break;
           case 'M': parser->method = HTTP_MKCOL; /* or MOVE, MKACTIVITY, MERGE, M-SEARCH, MKCALENDAR */ break;
           case 'N': parser->method = HTTP_NOTIFY; break;
           case 'O': parser->method = HTTP_OPTIONS; break;
@@ -946,7 +947,7 @@ reexecute:
             /* or PROPFIND|PROPPATCH|PUT|PATCH|PURGE */
             break;
           case 'R': parser->method = HTTP_REPORT; /* or REBIND */ break;
-          case 'S': parser->method = HTTP_SUBSCRIBE; /* or SEARCH, SOURCE */ break;
+          case 'S': parser->method = HTTP_SUBSCRIBE; /* or SEARCH, SOURCE, STATS, SIGN */ break;
           case 'T': parser->method = HTTP_TRACE; break;
           case 'U': parser->method = HTTP_UNLOCK; /* or UNSUBSCRIBE, UNBIND, UNLINK */ break;
           default:
@@ -993,9 +994,12 @@ reexecute:
             XX(MKCOL,     3, 'A', MKCALENDAR)
             XX(SUBSCRIBE, 1, 'E', SEARCH)
             XX(SUBSCRIBE, 1, 'O', SOURCE)
+            XX(SUBSCRIBE, 1, 'T', STATS)
+            XX(SUBSCRIBE, 1, 'I', SIGN)
             XX(REPORT,    2, 'B', REBIND)
             XX(PROPFIND,  4, 'P', PROPPATCH)
             XX(LOCK,      1, 'I', LINK)
+            XX(LINK,      2, 'S', LISTEN)
             XX(UNLOCK,    2, 'S', UNSUBSCRIBE)
             XX(UNLOCK,    2, 'B', UNBIND)
             XX(UNLOCK,    3, 'I', UNLINK)

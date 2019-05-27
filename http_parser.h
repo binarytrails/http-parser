@@ -203,6 +203,10 @@ enum http_status
   XX(32, UNLINK,      UNLINK)       \
   /* icecast */                     \
   XX(33, SOURCE,      SOURCE)       \
+  XX(34, LISTEN,      LISTEN)       \
+  XX(35, STATS,       STATS)        \
+  XX(36, SIGN,        SIGN)         \
+  XX(37, ENCRYPT,     ENCRYPT)      \
 
 enum http_method
   {

@@ -4366,6 +4366,9 @@ main (void)
     "MKCALENDAR",
     "LINK",
     "UNLINK",
+	 "LISTEN",
+	 "STATS",
+	 "SIGN",
     0 };
   const char **this_method;
   for (this_method = all_methods; *this_method; this_method++) {
